@@ -1,4 +1,4 @@
-package VariableArrangementAndLoop;
+package variableArrangementAndLoop;
 
 import java.util.Scanner;
 

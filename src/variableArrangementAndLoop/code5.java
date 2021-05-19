@@ -1,8 +1,8 @@
-package VariableArrangementAndLoop;
+package variableArrangementAndLoop;
 
 import java.util.Scanner;
 
-public class code6 {
+public class code5 {
 
 	public static void main(String[] args) {
 		
@@ -11,19 +11,22 @@ public class code6 {
 		int n = sc.nextInt();
 		int val[] = new int[n];
 		
+		int total = 0;
+		int max = val[0];
 		for(int i=0;i<n;i++) {
 			System.out.println(n+"개의 배열에 값을 입력합니다. 값을 입력하세요.");
 			val[i] = sc.nextInt();
 		}
 		sc.close();
-
-		int temp = val[n-1];	
-		for(int i =n-2; i>=0 ;i--) {
-			val[i+1] = val[i];
-		}
-		val[0] = temp;
 		
-		for(int i = 0; i<n ; i++) System.out.println("val["+i+"] = "+val[i]);
+		for(int i =0; i<n ;i++) {
+			total = total + val[i];
+			if(max<val[i]) max=val[i];
+		}
+		
+		System.out.println("total = "+total +", max = "+max);
+		
+		
 	}
 	
 }
